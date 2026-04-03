@@ -1,6 +1,8 @@
 package com.bridgingproject;
 public class Main {
     static void main() {
-        IO.println("Hello World");
+        for (int i = 0; i < 5; i++) {
+            IO.println("Hello "+ i);
+        }
     }
 }
