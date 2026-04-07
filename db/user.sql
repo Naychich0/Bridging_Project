@@ -1,0 +1,3 @@
+CREATE USER IF NOT EXISTS 'testuser'@'%' IDENTIFIED BY 'testtest';
+GRANT ALL PRIVILEGES ON test_db.* TO 'testuser'@'%';
+FLUSH PRIVILEGES;
