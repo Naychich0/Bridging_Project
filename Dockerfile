@@ -1,5 +1,5 @@
 FROM eclipse-temurin:25
 LABEL authors="sunshine"
-COPY ./target/classes/com /tmp/com
+COPY ./target/bridgingproject.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.bridgingproject.Main"]
+ENTRYPOINT ["java","-jar", "bridgingproject.jar"]

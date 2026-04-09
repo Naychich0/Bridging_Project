@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+#Docker env name => db & app
+#built => docker file location
+#  % => wild card
+  db:
+    image: mysql_db
+    container_name: mysql_db
+    build: db/.
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - "33060:3306"
+
+  app:
+    image: bridging_app
+    container_name: bridging_app
+    build: .

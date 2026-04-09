@@ -7,8 +7,13 @@ public class Main {
     public Connection getConnection(){
         Connection con = null;
         try {
+//            Local
+//            con = DriverManager.getConnection(
+//                    "JDBC:mysql://localhost:33060/test_db?useSSL=false&allowPublicKeyRetrieval=true",
+//                    "testuser", "testtest");
+//            Docker
             con = DriverManager.getConnection(
-                    "JDBC:mysql://localhost:33060/test_db?useSSL=false&allowPublicKeyRetrieval=true",
+                    "JDBC:mysql://db:3306/test_db?useSSL=false&allowPublicKeyRetrieval=true",
                     "testuser", "testtest");
             //check the port number
             IO.println("Connected Successful."); //database connection
@@ -113,15 +118,15 @@ public class Main {
 //        System.out.println("Insert Office Data");
 //        m.insert_offices(con, "8","Yangon","+95 9785868493","Sanchaung", "Myanmar","11111","Asia");
 
-        System.out.println("-------------Employee Data in Paris");
-        m.employee_data(con);
+//        System.out.println("-------------Employee Data in Paris");
+//        m.employee_data(con);
 
 //        System.out.println("Update Office Data");
 //        m.update_city(con, "Mandalay","+95 9785868493");
 
 
-        m.delete(con);
-        System.out.println("Deleted Office Data");
+//        m.delete(con);
+//        System.out.println("Deleted Office Data");
 
         System.out.println("Select Data From Office");
         m.office_data(con); //Select data
